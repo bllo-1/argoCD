@@ -1,21 +1,19 @@
-# tetris-deployment.yaml
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo
+  name: demo-app
 spec:
-  replicas: 1 # You can adjust the number of replicas as needed
+  replicas: 1
   selector:
     matchLabels:
-      app: demo
+      app: demo-app
   template:
     metadata:
       labels:
-        app: demo
+        app: demo-app
     spec:
       containers:
-        - name: demo-cont
-          image: silasbw/hello # Replace with the actual image tag
-          ports:
-            - containerPort: 80 # Replace with the port your Tetris game listens on
+      - name: demo-app
+        image: cy4n/hello:latest
+        ports:
+        - containerPort: 3000
