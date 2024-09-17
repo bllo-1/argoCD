@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: nginxdemos/hello
+        image: knakkergaard/squiddemoweb
         ports:
         - containerPort: 3000
