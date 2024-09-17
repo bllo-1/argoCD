@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: cy4n/hello:latest
+        image: nginxdemos/hello
         ports:
         - containerPort: 3000
