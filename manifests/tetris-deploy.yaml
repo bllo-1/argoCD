@@ -3,7 +3,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-app
+  name: demo
 spec:
   replicas: 2 # You can adjust the number of replicas as needed
   selector:
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: demo-cont
-          image: abdallah18/my-django-app # Replace with the actual image tag
+          image: django # Replace with the actual image tag
           ports:
             - containerPort: 80 # Replace with the port your Tetris game listens on
